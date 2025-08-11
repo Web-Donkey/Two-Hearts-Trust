@@ -1,0 +1,1737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two Hearts Charitable Trust - Love of Christ Urges Us</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #1e293b;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Header Styles */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            padding: 1rem 0;
+        }
+
+        .header.scrolled {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .mother-mary-img {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #dbeafe;
+        }
+
+        .logo-text {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #1e293b;
+        }
+
+        .nav-desktop {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .nav-desktop a {
+            text-decoration: none;
+            color: #475569;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .nav-desktop a:hover {
+            color: #2563eb;
+        }
+
+        .btn-donate {
+            background: #2563eb;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+
+        .btn-donate:hover {
+            background: #1d4ed8;
+            transform: translateY(-1px);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .mobile-nav {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: white;
+            border-top: 1px solid #e2e8f0;
+            padding: 1rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .mobile-nav.active {
+            display: block;
+        }
+
+        .mobile-nav a {
+            display: block;
+            text-decoration: none;
+            color: #475569;
+            padding: 0.75rem 0;
+            font-weight: 500;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #1e3a8a 0%, #475569 50%, #1e40af 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url('https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.3;
+            filter: brightness(0.4);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1000px;
+        }
+
+        .hero-logo {
+            height: 80px;
+            margin-bottom: 2rem;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 800;
+            margin-bottom: 2rem;
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 2rem auto;
+            backdrop-filter: blur(10px);
+        }
+
+        .hero p {
+            font-size: clamp(1.125rem, 2.5vw, 1.5rem);
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .hero-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 3rem 0;
+        }
+
+        .hero-card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .hero-card h3 {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 3rem;
+        }
+
+        .btn-primary {
+            background: #2563eb;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.125rem;
+            transition: all 0.3s ease;
+            border: 2px solid #2563eb;
+        }
+
+        .btn-primary:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.125rem;
+            transition: all 0.3s ease;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: #1e3a8a;
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 5rem 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 800;
+            color: #1e293b;
+            margin-bottom: 1.5rem;
+        }
+
+        .section-divider {
+            width: 100px;
+            height: 4px;
+            background: #2563eb;
+            margin: 0 auto 1.5rem;
+            border-radius: 2px;
+        }
+
+        .section-description {
+            font-size: 1.25rem;
+            color: #64748b;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* About Section */
+        .about {
+            background: #f8fafc;
+        }
+
+        .about-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .about-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .about-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+        }
+
+        .about-card.blue {
+            border-color: #dbeafe;
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+        }
+
+        .about-card.green {
+            border-color: #dcfce7;
+            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+        }
+
+        .about-card.purple {
+            border-color: #e9d5ff;
+            background: linear-gradient(135deg, #faf5ff 0%, #e9d5ff 100%);
+        }
+
+        .about-card-icon {
+            width: 64px;
+            height: 64px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-card h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: #1e293b;
+        }
+
+        .about-card p {
+            color: #64748b;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+
+        .about-card-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #2563eb;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 1rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-card-content {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .service-image-container {
+            position: relative;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-image {
+            width: 96px;
+            height: 96px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #dbeafe;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .service-icon {
+            position: absolute;
+            bottom: -8px;
+            right: calc(50% - 48px - 8px);
+            width: 40px;
+            height: 40px;
+            background: #2563eb;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+        }
+
+        .service-card h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #1e293b;
+        }
+
+        .service-card p {
+            color: #64748b;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-card-link {
+            color: #2563eb;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Facilities Section */
+        .facilities {
+            background: #f8fafc;
+        }
+
+        .facilities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .facility-card {
+            background: white;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .facility-card:hover {
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .facility-image-container {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .facility-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .facility-card:hover .facility-image {
+            transform: scale(1.05);
+        }
+
+        .facility-icon-overlay {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+        }
+
+        .facility-card-content {
+            padding: 1.5rem;
+        }
+
+        .facility-card h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #1e293b;
+        }
+
+        .facility-card p {
+            color: #64748b;
+            line-height: 1.7;
+        }
+
+        /* Contact Section */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .contact-item {
+            background: white;
+            border-radius: 1rem;
+            padding: 2rem;
+            border: 2px solid #e2e8f0;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .contact-item.blue {
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+            border-color: #dbeafe;
+        }
+
+        .contact-item.green {
+            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+            border-color: #dcfce7;
+        }
+
+        .contact-item.purple {
+            background: linear-gradient(135deg, #faf5ff 0%, #e9d5ff 100%);
+            border-color: #e9d5ff;
+        }
+
+        .contact-item.rose {
+            background: linear-gradient(135deg, #fff1f2 0%, #fecdd3 100%);
+            border-color: #fecdd3;
+        }
+
+        .contact-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .contact-icon.blue {
+            background: #2563eb;
+        }
+
+        .contact-icon.green {
+            background: #16a34a;
+        }
+
+        .contact-icon.purple {
+            background: #7c3aed;
+        }
+
+        .contact-icon.rose {
+            background: #e11d48;
+        }
+
+        .contact-form {
+            background: white;
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            transition: border-color 0.2s ease;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: #2563eb;
+        }
+
+        .form-textarea {
+            width: 100%;
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .form-submit {
+            width: 100%;
+            background: #2563eb;
+            color: white;
+            padding: 0.75rem 1rem;
+            border: none;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .form-submit:hover {
+            background: #1d4ed8;
+            transform: translateY(-1px);
+        }
+
+        /* Footer */
+        .footer {
+            background: #1e293b;
+            color: white;
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-brand h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .footer-brand-icon {
+            width: 32px;
+            height: 32px;
+            background: #2563eb;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .footer p {
+            color: #cbd5e1;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 0.75rem;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: white;
+            transition: transform 0.2s ease;
+        }
+
+        .social-link:hover {
+            transform: translateY(-2px);
+        }
+
+        .social-link.facebook {
+            background: #1877f2;
+        }
+
+        .social-link.twitter {
+            background: #1da1f2;
+        }
+
+        .social-link.instagram {
+            background: #e4405f;
+        }
+
+        .footer-section h4 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-links a {
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #334155;
+            padding-top: 2rem;
+            text-align: center;
+        }
+
+        .footer-bottom p {
+            color: #94a3b8;
+            font-size: 0.875rem;
+        }
+
+        /* Modal Styles */
+        .modal {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.5);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            padding: 1rem;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: 1rem;
+            max-width: 800px;
+            max-height: 80vh;
+            overflow-y: auto;
+            position: relative;
+            width: 100%;
+        }
+
+        .modal-header {
+            padding: 2rem 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .modal-title {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #1e293b;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .modal-close {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #64748b;
+            padding: 0.5rem;
+            border-radius: 50%;
+            transition: background-color 0.2s ease;
+        }
+
+        .modal-close:hover {
+            background: #f1f5f9;
+        }
+
+        .modal-body {
+            padding: 2rem;
+        }
+
+        .modal-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .modal-text {
+            font-size: 1.125rem;
+            line-height: 1.8;
+            color: #374151;
+            margin-bottom: 1.5rem;
+        }
+
+        .vision-mission-grid {
+            display: grid;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .vision-card, .mission-card {
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+        }
+
+        .vision-card {
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+        }
+
+        .mission-card {
+            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+        }
+
+        .vision-card h4 {
+            color: #1e40af;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .mission-card h4 {
+            color: #166534;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .mission-list {
+            list-style: none;
+        }
+
+        .mission-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .mission-number {
+            width: 24px;
+            height: 24px;
+            background: #16a34a;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.875rem;
+            font-weight: 700;
+            flex-shrink: 0;
+            margin-top: 0.25rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-desktop {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .about-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .facilities-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .facilities-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .animate-on-scroll.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Utility Classes */
+        .text-center { text-align: center; }
+        .mb-1 { margin-bottom: 0.25rem; }
+        .mb-2 { margin-bottom: 0.5rem; }
+        .mb-3 { margin-bottom: 0.75rem; }
+        .mb-4 { margin-bottom: 1rem; }
+        .mt-2 { margin-top: 0.5rem; }
+        .mt-4 { margin-top: 1rem; }
+        .font-semibold { font-weight: 600; }
+        .font-bold { font-weight: 700; }
+        .text-sm { font-size: 0.875rem; }
+        .text-blue { color: #2563eb; }
+        .text-green { color: #16a34a; }
+        .text-gray { color: #64748b; }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="header-container">
+            <div class="logo-section">
+                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Mother Mary" class="mother-mary-img">
+                <div class="logo-text">Two Hearts Charitable Trust</div>
+            </div>
+            
+            <nav class="nav-desktop">
+                <a href="#home">Home</a>
+                <a href="#about">About Us</a>
+                <a href="#services">Services</a>
+                <a href="#facilities">Facilities</a>
+                <a href="#contact">Contact</a>
+                <a href="#donate" class="btn-donate">Donate Now</a>
+            </nav>
+            
+            <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
+            
+            <nav class="mobile-nav" id="mobile-nav">
+                <a href="#home">Home</a>
+                <a href="#about">About Us</a>
+                <a href="#services">Services</a>
+                <a href="#facilities">Facilities</a>
+                <a href="#contact">Contact</a>
+                <a href="#donate" class="btn-donate">Donate Now</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content animate-on-scroll">
+            <img src="https://images.unsplash.com/photo-1586611292717-f828b167408c?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Two Hearts Logo" class="hero-logo">
+            
+            <h1>Love of Christ Urges Us</h1>
+            
+            <div class="hero-icon">
+                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                </svg>
+            </div>
+            
+            <p>
+                The Teresa Fardella Palliative and Hospice Centre, the first initiative of Two Hearts 
+                Charitable Trust, provides compassionate and professional care to terminally ill patients. 
+                While our vision is to offer free, accessible care to all, the real cost of quality 
+                medical and nursing services is high.
+            </p>
+            
+            <p>
+                To sustain operations, we charge a minimal fee that helps cover basic expenses such as 
+                staff salaries, medicines, utilities, and meals. However, this only meets a portion of our needs.
+            </p>
+            
+            <p>
+                To bridge the gap—and to continue serving the financially poor and the abandoned—we humbly 
+                seek the support of donors and benefactors.
+            </p>
+            
+            <div class="hero-cards">
+                <div class="hero-card">
+                    <h3>Subsidized Care</h3>
+                    <p>Free care for those in need</p>
+                </div>
+                <div class="hero-card">
+                    <h3>Medical Supplies</h3>
+                    <p>Equipment and medicines</p>
+                </div>
+                <div class="hero-card">
+                    <h3>Dignified Environment</h3>
+                    <p>Peaceful care for patients</p>
+                </div>
+            </div>
+            
+            <div class="hero-buttons">
+                <a href="#donate" class="btn-primary">Support Our Mission</a>
+                <a href="#about" class="btn-secondary">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2 class="section-title">About Two Hearts Charitable Trust</h2>
+                <div class="section-divider"></div>
+                <p class="section-description">
+                    Inspired by the legacy of Venerable Teresa Fardella, we continue a mission of 
+                    compassionate service to the terminally ill, elderly, and vulnerable members of our community.
+                </p>
+            </div>
+            
+            <div class="about-cards">
+                <div class="about-card blue animate-on-scroll" onclick="openModal('who-we-are')">
+                    <div class="about-card-icon">
+                        <svg width="32" height="32" fill="#2563eb" viewBox="0 0 24 24">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                        </svg>
+                    </div>
+                    <h3>Who We Are</h3>
+                    <p>Learn about our sacred mission rooted in faith and compassion</p>
+                    <a href="#" class="about-card-link">
+                        Learn More
+                        <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M5 12h14m-7-7l7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+                
+                <div class="about-card green animate-on-scroll" onclick="openModal('how-we-operate')">
+                    <div class="about-card-icon">
+                        <svg width="32" height="32" fill="#16a34a" viewBox="0 0 24 24">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                    </div>
+                    <h3>How We Operate</h3>
+                    <p>Discover how we serve through generosity and transparency</p>
+                    <a href="#" class="about-card-link">
+                        Learn More
+                        <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M5 12h14m-7-7l7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+                
+                <div class="about-card purple animate-on-scroll" onclick="openModal('vision-mission')">
+                    <div class="about-card-icon">
+                        <svg width="32" height="32" fill="#7c3aed" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 6v6l4 2"/>
+                        </svg>
+                    </div>
+                    <h3>Our Vision & Mission</h3>
+                    <p>Understand our commitment to dignity and hope</p>
+                    <a href="#" class="about-card-link">
+                        Learn More
+                        <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M5 12h14m-7-7l7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section services" id="services">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2 class="section-title">Our Services</h2>
+                <div class="section-divider"></div>
+                <p class="section-description">
+                    Compassionate, faith-driven care and support services powered by the generosity of donors 
+                    and the dedication of trained volunteers, rooted in the love of the Two Hearts of Jesus and Mary.
+                </p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card animate-on-scroll">
+                    <div class="service-card-content">
+                        <div class="service-image-container">
+                            <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="In-Patient Care" class="service-image">
+                            <div class="service-icon">
+                                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <h3>In-Patient Palliative Care</h3>
+                        <p>We provide 24/7 medical and nursing care for patients with serious or terminal illnesses. Our team ensures pain management, symptom relief, emotional support, and spiritual accompaniment in a peaceful, home-like setting.</p>
+                        <a href="#" class="service-card-link">
+                            Learn More
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M5 12h14m-7-7l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="service-card animate-on-scroll">
+                    <div class="service-card-content">
+                        <div class="service-image-container">
+                            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Hospice Care" class="service-image">
+                            <div class="service-icon">
+                                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                                    <polyline points="9,22 9,12 15,12 15,22"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <h3>Hospice Care</h3>
+                        <p>For those nearing the end of life, we offer compassionate hospice services that focus on comfort, dignity, and emotional support for both patients and their families.</p>
+                        <a href="#" class="service-card-link">
+                            Learn More
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M5 12h14m-7-7l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="service-card animate-on-scroll">
+                    <div class="service-card-content">
+                        <div class="service-image-container">
+                            <img src="https://images.unsplash.com/photo-1581594549595-35f6edc7b762?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Day Care" class="service-image">
+                            <div class="service-icon">
+                                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="9" cy="7" r="4"/>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <h3>Day Care Centre for Elderly Women</h3>
+                        <p>We operate a day care program for elderly women, offering them a nurturing space for companionship, nourishment, prayer, and productive engagement.</p>
+                        <a href="#" class="service-card-link">
+                            Learn More
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M5 12h14m-7-7l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="service-card animate-on-scroll">
+                    <div class="service-card-content">
+                        <div class="service-image-container">
+                            <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Home Care" class="service-image">
+                            <div class="service-icon">
+                                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                    <circle cx="12" cy="10" r="3"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <h3>Home Care Services</h3>
+                        <p>For patients who prefer to stay at home, we offer professional home visits by nurses and caregivers to monitor health, manage symptoms, and provide guidance to families.</p>
+                        <a href="#" class="service-card-link">
+                            Learn More
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M5 12h14m-7-7l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="service-card animate-on-scroll">
+                    <div class="service-card-content">
+                        <div class="service-image-container">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Women Empowerment" class="service-image">
+                            <div class="service-icon">
+                                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <h3>Women Empowerment</h3>
+                        <p>Through our community initiatives, we empower women—especially the elderly and marginalized—by encouraging self-employment, creative expression, and community participation.</p>
+                        <a href="#" class="service-card-link">
+                            Learn More
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M5 12h14m-7-7l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="service-card animate-on-scroll">
+                    <div class="service-card-content">
+                        <div class="service-image-container">
+                            <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Training" class="service-image">
+                            <div class="service-icon">
+                                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <h3>Volunteer Training and Formation</h3>
+                        <p>We believe that compassionate service begins with formation. Our structured volunteer training programs prepare individuals to serve effectively in hospice care, elderly support, and home visits.</p>
+                        <a href="#" class="service-card-link">
+                            Learn More
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M5 12h14m-7-7l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facilities Section -->
+    <section class="section facilities" id="facilities">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2 class="section-title">Teresa Fardella Palliative and Hospice Centre</h2>
+                <div class="section-divider"></div>
+                <p class="section-description">
+                    Our facilities are thoughtfully designed to offer a peaceful, supportive, and homelike 
+                    environment where healing, comfort, and dignity come together for patients and their families.
+                </p>
+            </div>
+            
+            <div class="facilities-grid">
+                <div class="facility-card animate-on-scroll">
+                    <div class="facility-image-container">
+                        <img src="https://images.unsplash.com/photo-1581594549595-35f6edc7b762?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Patient Area" class="facility-image">
+                        <div class="facility-icon-overlay">
+                            <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M2 4h20v16H2z"/>
+                                <path d="M6 8h4"/>
+                                <path d="M6 12h4"/>
+                                <path d="M14 8h4"/>
+                                <path d="M14 12h4"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="facility-card-content">
+                        <h3>Comfortable In-Patient Area</h3>
+                        <p>Spacious, clean, and well-ventilated area with beds, side tables, and seating for visitors.</p>
+                    </div>
+                </div>
+                
+                <div class="facility-card animate-on-scroll">
+                    <div class="facility-image-container">
+                        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Medical Care" class="facility-image">
+                        <div class="facility-icon-overlay">
+                            <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M12 6v6l4 2"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="facility-card-content">
+                        <h3>24/7 Medical and Nursing Care</h3>
+                        <p>Our trained team of doctors, nurses, and caregivers are available round the clock to manage symptoms, provide medications, and respond to emergencies with compassion and professionalism.</p>
+                    </div>
+                </div>
+                
+                <div class="facility-card animate-on-scroll">
+                    <div class="facility-image-container">
+                        <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Day Care" class="facility-image">
+                        <div class="facility-icon-overlay">
+                            <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M8 6v6c0 1.1.9 2 2 2h4c1.1 0 2-.9 2-2V6"/>
+                                <path d="M8 6c0-1.1.9-2 2-2h4c1.1 0 2 .9 2 2"/>
+                                <path d="M4 20v-2c0-1.1.9-2 2-2h12c1.1 0 2 .9 2 2v2"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="facility-card-content">
+                        <h3>Day Care Facilities</h3>
+                        <p>A welcoming and engaging environment for elderly to spend the day in safety and companionship. Includes workspace for pickle and snack preparation, rest areas, and recreational activities.</p>
+                    </div>
+                </div>
+                
+                <div class="facility-card animate-on-scroll">
+                    <div class="facility-image-container">
+                        <img src="https://images.unsplash.com/photo-1486754735734-325b5831c3ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Prayer Room" class="facility-image">
+                        <div class="facility-icon-overlay">
+                            <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M10 2v2H8v18h2v2h4v-2h2V4h-2V2z"/>
+                                <path d="M6 8h2v8H6z"/>
+                                <path d="M16 8h2v8h-2z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="facility-card-content">
+                        <h3>Prayer and Meditation Room</h3>
+                        <p>A serene chapel space for reflection, prayer, and spiritual nourishment</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2 class="section-title">Contact Us</h2>
+                <div class="section-divider"></div>
+                <p class="section-description">
+                    We are here to serve with love and compassion. Reach out to us for support, 
+                    questions, or to join our mission of bringing hope and healing.
+                </p>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item blue animate-on-scroll">
+                        <div class="contact-icon blue">
+                            <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3>Our Location</h3>
+                            <p class="font-semibold">Teresa Fardella Palliative Care and Hospice Centre</p>
+                            <p class="text-gray">Puthukkalavattom, Ernakulam, Kerala, India</p>
+                            <p class="text-gray">Pin: 682026</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item green animate-on-scroll">
+                        <div class="contact-icon green">
+                            <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3>Email Us</h3>
+                            <p class="text-gray mb-2">We'd love to hear from you</p>
+                            <a href="mailto:twoheartstrust@gmail.com" class="text-green font-semibold">twoheartstrust@gmail.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item rose animate-on-scroll">
+                        <div class="contact-icon rose">
+                            <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                <circle cx="12" cy="7" r="4"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3>Our Trust Members</h3>
+                            <div class="mt-4">
+                                <p class="font-semibold">Sr Elizabeth Illickal</p>
+                                <p class="text-sm text-gray">President</p>
+                            </div>
+                            <div class="mt-2">
+                                <p class="font-semibold">Sr Jaya</p>
+                                <p class="text-sm text-gray">Secretary cum Treasurer</p>
+                            </div>
+                            <div class="mt-2">
+                                <p class="font-semibold">Sr Teresa Kunnakkattu</p>
+                                <p class="text-sm text-gray">Trustee</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="animate-on-scroll">
+                    <div class="contact-form">
+                        <h3 class="mb-4">Send Us a Message</h3>
+                        <form id="contact-form">
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <input type="text" class="form-input" placeholder="Your Name" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-input" placeholder="Your Email" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-input" placeholder="Subject" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-input form-textarea" placeholder="Your Message" rows="4" required></textarea>
+                            </div>
+                            <button type="submit" class="form-submit">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>
+                        <div class="footer-brand-icon">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                            </svg>
+                        </div>
+                        Two Hearts Charitable Trust
+                    </h3>
+                    <p>
+                        Inspired by Venerable Teresa Fardella de Blasi and the Sacred Hearts of Jesus and Mary, 
+                        we provide compassionate care to the terminally ill, elderly, and vulnerable members of our community.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link facebook">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link twitter">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link instagram">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#facilities">Facilities</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#donate">Donate</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact Information</h4>
+                    <div class="mt-4">
+                        <p class="text-sm font-semibold">Teresa Fardella Palliative Care</p>
+                        <p class="text-sm">Puthukkalavattom, Ernakulam</p>
+                        <p class="text-sm">Kerala, India - 682026</p>
+                    </div>
+                    <div class="mt-4">
+                        <a href="mailto:twoheartstrust@gmail.com" class="text-sm">twoheartstrust@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2024 Two Hearts Charitable Trust. All rights reserved.</p>
+                <p class="mt-2">"Love of Christ Urges Us" - Inspired by Teresa Fardella de Blasi</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal for About Sections -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="modal-title">Title</h2>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body" id="modal-body">
+                <!-- Content will be inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileNav = document.getElementById('mobile-nav');
+        
+        mobileMenuBtn.addEventListener('click', function() {
+            mobileNav.classList.toggle('active');
+            mobileMenuBtn.textContent = mobileNav.classList.contains('active') ? '×' : '☰';
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    mobileNav.classList.remove('active');
+                    mobileMenuBtn.textContent = '☰';
+                }
+            });
+        });
+
+        // Modal functionality
+        function openModal(modalType) {
+            const modal = document.getElementById('modal');
+            const modalTitle = document.getElementById('modal-title');
+            const modalBody = document.getElementById('modal-body');
+            
+            const heartIcon = '<svg width="32" height="32" fill="#2563eb" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>';
+            const usersIcon = '<svg width="32" height="32" fill="#16a34a" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>';
+            const targetIcon = '<svg width="32" height="32" fill="#7c3aed" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>';
+            
+            switch(modalType) {
+                case 'who-we-are':
+                    modalTitle.innerHTML = heartIcon + ' Who We Are';
+                    modalBody.innerHTML = `
+                        <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Who we are" class="modal-image">
+                        <p class="modal-text">
+                            Two Hearts Charitable Trust is the fruit of a sacred vision planted in the hearts of the Poor Daughters of 
+                            the Crowned Virgin (DCV Sisters)—a religious congregation founded by Venerable Teresa Fardella de Blasi in Italy. 
+                            Deeply moved by the suffering of the poor, the sick, and the abandoned, Teresa Fardella dedicated her life to 
+                            compassionate service rooted in faith and love.
+                        </p>
+                        <p class="modal-text">
+                            Her legacy lives on through the DCV Sisters, who continue her mission across the world. Inspired by her spirit, 
+                            the Two Heart Charitable Trust was established to extend this mission in India, particularly through acts of mercy, 
+                            health care, and empowerment.
+                        </p>
+                        <p class="modal-text">
+                            Named after the Sacred Heart of Jesus and the Immaculate Heart of Mary, the Trust embodies a twofold love: 
+                            one that heals and one that consoles. It brings together medical professionals, caregivers, volunteers, and 
+                            people of goodwill to serve the suffering with dignity, hope, and care.
+                        </p>
+                    `;
+                    break;
+                case 'how-we-operate':
+                    modalTitle.innerHTML = usersIcon + ' How We Operate';
+                    modalBody.innerHTML = `
+                        <p class="modal-text">
+                            Two Hearts Charitable Trust is a mission-driven charitable organization that operates entirely through the 
+                            generosity of kind-hearted donors and well-wishers. We do not charge for the work of the Trust itself. 
+                            Every initiative, outreach activity, and support service we offer is made possible by the freewill donations 
+                            of individuals, families, and organizations who believe in our mission.
+                        </p>
+                        <p class="modal-text">
+                            We are committed to transparency, integrity, and responsible stewardship, ensuring that every rupee received 
+                            is directed toward uplifting the poor, empowering women, caring for the aged, and bringing dignity to the suffering. 
+                            We rely on faith, prayer, and your support to keep this mission alive.
+                        </p>
+                    `;
+                    break;
+                case 'vision-mission':
+                    modalTitle.innerHTML = targetIcon + ' Our Vision & Mission';
+                    modalBody.innerHTML = `
+                        <div class="vision-mission-grid">
+                            <div class="vision-card">
+                                <h4>Our Vision</h4>
+                                <p class="modal-text">
+                                    Providing compassionate professional and nurturing medical and nursing care to terminally ill individuals, 
+                                    empowering them to live with dignity and hope.
+                                </p>
+                            </div>
+                            
+                            <div class="mission-card">
+                                <h4>Our Mission</h4>
+                                <ul class="mission-list">
+                                    <li>
+                                        <span class="mission-number">1</span>
+                                        <p class="modal-text">
+                                            To create a sanctuary of love and hope, delivering exceptional medical assistance that honors the 
+                                            dignity of every terminally ill person, integrating pastoral care and holistic support.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <span class="mission-number">2</span>
+                                        <p class="modal-text">
+                                            To promote awareness among family members of the patients and promoting compassion towards the terminally ill.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <span class="mission-number">3</span>
+                                        <p class="modal-text">
+                                            To provide accessible, quality care to financially disadvantaged inpatients, regardless of their 
+                                            background or circumstances.
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    `;
+                    break;
+            }
+            
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('modal');
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('modal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
+
+        // Animate on scroll
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.animate-on-scroll');
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('animated');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', animateOnScroll);
+        window.addEventListener('load', animateOnScroll);
+
+        // Contact form submission
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+            this.reset();
+        });
+
+        // Initialize animations on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            animateOnScroll();
+        });
+    </script>
+</body>
+</html>
