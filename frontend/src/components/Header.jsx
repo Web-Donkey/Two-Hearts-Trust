@@ -35,7 +35,7 @@ const Header = () => {
               alt="Mother Mary" 
               className="w-12 h-12 rounded-full object-cover border-2 border-blue-200"
             />
-            <div className="text-xl font-bold text-white text-shadow">
+            <div className={`text-xl font-bold ${isScrolled ? 'text-slate-800' : 'text-white text-shadow'}`}>
               Two Hearts Charitable Trust
             </div>
           </div>
