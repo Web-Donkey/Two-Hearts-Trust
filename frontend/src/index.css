@@ -84,3 +84,43 @@ code {
     @apply bg-background text-foreground;
     }
 }
+
+/* Design system components for spacing/consistency */
+@layer components {
+  .container-default {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  .section {
+    @apply py-24;
+  }
+  .section-title {
+    @apply text-4xl md:text-5xl font-bold text-slate-800 mb-6;
+  }
+  .section-divider {
+    @apply w-24 h-1 bg-blue-600 mx-auto mb-6;
+  }
+  .section-subtitle {
+    @apply text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed;
+  }
+  .card {
+    @apply bg-white rounded-xl shadow-md border border-gray-100;
+  }
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-xl;
+  }
+  .lift {
+    @apply transform hover:-translate-y-1;
+  }
+  .btn {
+    @apply rounded-full font-semibold transition-all duration-300;
+  }
+  .btn-primary {
+    @apply bg-blue-600 text-white hover:bg-blue-700;
+  }
+  .btn-secondary {
+    @apply border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white;
+  }
+  .btn-light {
+    @apply border-2 border-white text-white hover:bg-white hover:text-blue-900;
+  }
+}

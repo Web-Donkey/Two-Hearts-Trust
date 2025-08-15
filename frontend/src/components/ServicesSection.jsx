@@ -13,15 +13,13 @@ const ServicesSection = () => {
   };
 
   return (
-    <section id="services" className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="services" className="section bg-white">
+      <div className="container-default">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-6">
-            Our Services
-          </h2>
-          <div className="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+          <h2 className="section-title">Our Services</h2>
+          <div className="section-divider"></div>
+          <p className="section-subtitle">
             Compassionate, faith-driven care and support services powered by the generosity of donors 
             and the dedication of trained volunteers, rooted in the love of the Two Hearts of Jesus and Mary.
           </p>
@@ -34,7 +32,7 @@ const ServicesSection = () => {
             return (
               <div 
                 key={index}
-                className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 overflow-hidden group"
+                className="card card-hover lift overflow-hidden group"
               >
                 {/* Service Icon */}
                 <div className="p-8 text-center">
@@ -80,10 +78,10 @@ const ServicesSection = () => {
               to those who need it most.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105">
+              <button className="btn btn-primary px-8 py-3">
                 Become a Volunteer
               </button>
-              <button className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-3 rounded-full font-semibold transition-all duration-300">
+              <button className="btn btn-secondary px-8 py-3">
                 Make a Donation
               </button>
             </div>

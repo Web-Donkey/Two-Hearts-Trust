@@ -35,15 +35,13 @@ const AboutSection = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="about" className="section bg-gray-50">
+      <div className="container-default">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-6">
-            About Two Hearts Charitable Trust
-          </h2>
-          <div className="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+          <h2 className="section-title">About Two Hearts Charitable Trust</h2>
+          <div className="section-divider"></div>
+          <p className="section-subtitle">
             Inspired by the legacy of Venerable Teresa Fardella, we continue a mission of 
             compassionate service to the terminally ill, elderly, and vulnerable members of our community.
           </p>

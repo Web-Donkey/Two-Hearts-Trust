@@ -63,14 +63,12 @@ const FacilitiesSection = () => {
   ];
 
   return (
-    <section id="facilities" className="py-20 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="facilities" className="section bg-gray-50">
+      <div className="container-default">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-6">
-            Teresa Fardella Palliative and Hospice Centre
-          </h2>
-          <div className="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
+          <h2 className="section-title">Teresa Fardella Palliative and Hospice Centre</h2>
+          <div className="section-divider"></div>
           <p className="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed">
             Our facilities are thoughtfully designed to offer a peaceful, supportive, and homelike 
             environment where healing, comfort, and dignity come together for patients and their families.
@@ -84,7 +82,7 @@ const FacilitiesSection = () => {
             return (
               <div 
                 key={index}
-                className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group"
+                className="card card-hover overflow-hidden group"
               >
                 {/* Image */}
                 <div className="relative overflow-hidden">
@@ -113,7 +111,7 @@ const FacilitiesSection = () => {
         </div>
 
         {/* Feature Highlights */}
-        <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+        <div className="card p-8">
           <div className="text-center mb-8">
             <h3 className="text-3xl font-bold text-slate-800 mb-4">
               Excellence in Every Detail

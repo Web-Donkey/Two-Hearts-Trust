@@ -4,15 +4,13 @@ import { mockData } from './mock';
 
 const ContactSection = () => {
   return (
-    <section id="contact" className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="contact" className="section bg-white">
+      <div className="container-default">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-6">
-            Contact Us
-          </h2>
-          <div className="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+          <h2 className="section-title">Contact Us</h2>
+          <div className="section-divider"></div>
+          <p className="section-subtitle">
             We are here to serve with love and compassion. Reach out to us for support, 
             questions, or to join our mission of bringing hope and healing.
           </p>
@@ -112,7 +110,7 @@ const ContactSection = () => {
             </div>
 
             {/* Quick Contact Form */}
-            <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+            <div className="card p-8">
               <h3 className="text-2xl font-bold text-slate-800 mb-6">Send Us a Message</h3>
               <form className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-4">
@@ -139,7 +137,7 @@ const ContactSection = () => {
                 ></textarea>
                 <button 
                   type="submit"
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
+                  className="btn btn-primary w-full px-8 py-3"
                 >
                   Send Message
                 </button>
@@ -157,7 +155,7 @@ const ContactSection = () => {
               Mother Teresa Fardella and the Two Hearts of Jesus and Mary, offering love, presence, 
               and hope to those who suffer."
             </p>
-            <button className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105">
+            <button className="btn btn-light px-8 py-3">
               Support Our Cause
             </button>
           </div>
