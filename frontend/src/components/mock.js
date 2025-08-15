@@ -38,7 +38,7 @@ export const mockData = {
     {
       title: "In-Patient Palliative Care",
       description: "We provide 24/7 medical and nursing care for patients with serious or terminal illnesses. Our team ensures pain management, symptom relief, emotional support, and spiritual accompaniment in a peaceful, home-like setting.",
-      image: "/images/services/community-worship.jpg",
+      image: "/images/hero/hero-caring.jpg",
       icon: "Heart"
     },
     {
