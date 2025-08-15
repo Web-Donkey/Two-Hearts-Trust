@@ -22,6 +22,8 @@ const Header = () => {
     }
   };
 
+  const navLinkClass = `${isScrolled ? 'text-slate-700 hover:text-blue-600' : 'text-white hover:text-blue-200'} transition-colors duration-200 font-medium`;
+
   return (
     <header className={`fixed w-full top-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-white/95 backdrop-blur-sm shadow-lg' : 'bg-transparent'
@@ -42,36 +44,11 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <button 
-              onClick={() => scrollToSection('home')}
-              className="text-slate-700 hover:text-blue-600 transition-colors duration-200 font-medium"
-            >
-              Home
-            </button>
-            <button 
-              onClick={() => scrollToSection('about')}
-              className="text-slate-700 hover:text-blue-600 transition-colors duration-200 font-medium"
-            >
-              About Us
-            </button>
-            <button 
-              onClick={() => scrollToSection('services')}
-              className="text-slate-700 hover:text-blue-600 transition-colors duration-200 font-medium"
-            >
-              Services
-            </button>
-            <button 
-              onClick={() => scrollToSection('facilities')}
-              className="text-slate-700 hover:text-blue-600 transition-colors duration-200 font-medium"
-            >
-              Facilities
-            </button>
-            <button 
-              onClick={() => scrollToSection('contact')}
-              className="text-slate-700 hover:text-blue-600 transition-colors duration-200 font-medium"
-            >
-              Contact
-            </button>
+            <button onClick={() => scrollToSection('home')} className={navLinkClass}>Home</button>
+            <button onClick={() => scrollToSection('about')} className={navLinkClass}>About Us</button>
+            <button onClick={() => scrollToSection('services')} className={navLinkClass}>Services</button>
+            <button onClick={() => scrollToSection('facilities')} className={navLinkClass}>Facilities</button>
+            <button onClick={() => scrollToSection('contact')} className={navLinkClass}>Contact</button>
             <button className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors duration-200 font-medium">
               Donate Now
             </button>
@@ -79,8 +56,9 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button 
-            className="md:hidden text-slate-700"
+            className={`md:hidden ${isScrolled ? 'text-slate-700' : 'text-white'}`}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label={isMenuOpen ? 'Close Menu' : 'Open Menu'}
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
