@@ -75,7 +75,7 @@ const HeroSection = () => {
         </div>
 
         {/* Down Arrow after buttons with spacing */}
-        <div className="mt-10 flex justify-center">
+        <div className="mt-10 mb-4 flex justify-center">
           <button 
             onClick={scrollToNext}
             className="text-white/80 hover:text-white transition-colors duration-300 animate-bounce"
