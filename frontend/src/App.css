@@ -19,6 +19,11 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Ensure anchor navigation with fixed header keeps headings visible */
+section {
+  scroll-margin-top: 96px; /* ~24px header padding + logo height */
+}
+
 /* Custom animations */
 @keyframes fadeIn {
   from {
