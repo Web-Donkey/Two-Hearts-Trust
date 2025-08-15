@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heart, ArrowDown } from 'lucide-react';
+import { ArrowDown } from 'lucide-react';
 import { mockData } from './mock';
 
 const HeroSection = () => {
@@ -11,7 +11,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="home" className="relative min-h-screen flex items-start justify-center overflow-hidden">
       {/* Background Image with Overlay */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -25,27 +25,11 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-blue-900/80 via-slate-800/70 to-blue-800/60" />
       
       {/* Content */}
-      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        {/* Logo */}
-        <div className="mb-8 animate-fadeIn">
-          <img 
-            src={mockData.hero.logo} 
-            alt="Two Hearts Logo" 
-            className="mx-auto h-20 w-auto mb-4"
-          />
-        </div>
-        
-        {/* Main Tagline */}
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-28 md:pt-36">
+        {/* Main Tagline - placed near top middle */}
         <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 animate-slideUp">
           {mockData.hero.tagline}
         </h1>
-        
-        {/* Heart Icon */}
-        <div className="flex justify-center mb-8">
-          <div className="p-4 bg-white/20 backdrop-blur-sm rounded-full">
-            <Heart className="w-8 h-8 text-white" fill="currentColor" />
-          </div>
-        </div>
         
         {/* Description */}
         <div className="max-w-4xl mx-auto mb-12">
@@ -89,14 +73,17 @@ const HeroSection = () => {
             Learn More
           </button>
         </div>
-        
-        {/* Scroll Indicator */}
-        <button 
-          onClick={scrollToNext}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white/60 hover:text-white transition-colors duration-300 animate-bounce"
-        >
-          <ArrowDown size={32} />
-        </button>
+
+        {/* Down Arrow after buttons with spacing */}
+        <div className="mt-10 flex justify-center">
+          <button 
+            onClick={scrollToNext}
+            className="text-white/80 hover:text-white transition-colors duration-300 animate-bounce"
+            aria-label="Scroll to next section"
+          >
+            <ArrowDown size={32} />
+          </button>
+        </div>
       </div>
     </section>
   );
