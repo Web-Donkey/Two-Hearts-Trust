@@ -17,11 +17,20 @@ export const mockData = {
     whoWeAre: {
       title: "Who We Are",
       image: "/images/about/volunteer.jpg",
-      content: "Two Hearts Charitable Trust is the fruit of a sacred vision planted in the hearts of the Poor Daughters of the Crowned Virgin (DCV Sisters)—a religious congregation founded by Venerable Teresa Fardella de Blasi in Italy. Deeply moved by the suffering of the poor, the sick, and the abandoned, Teresa Fardella dedicated her life to compassionate service rooted in faith and love."
+      paragraphs: [
+        "Two Hearts Charitable Trust is the fruit of a sacred vision planted in the hearts of the Poor Daughters of the Crowned Virgin (DCV Sisters)—a religious congregation founded by Venerable Teresa Fardella de Blasi in Italy. Deeply moved by the suffering of the poor, the sick, and the abandoned, Teresa Fardella dedicated her life to compassionate service rooted in faith and love.",
+        "Her legacy lives on through the DCV Sisters, who continue her mission across the world. Inspired by her spirit, the Two Heart Charitable Trust was established to extend this mission in India, particularly through acts of mercy, health care, and empowerment.",
+        "Named after the Sacred Heart of Jesus and the Immaculate Heart of Mary, the Trust embodies a twofold love: one that heals and one that consoles. It brings together medical professionals, caregivers, volunteers, and people of goodwill to serve the suffering with dignity, hope, and care.",
+        "Our first initiative, the Teresa Fardella Palliative and Hospice Centre at Elamakkara, Kochi, offers professional and affordable palliative care to the terminally ill. It is a living tribute to the legacy of our foundress—a home where every person is respected, comforted, and accompanied with love until the end of life.",
+        "As we grow, we remain guided by Teresa Fardella’s example and the call to 'serve Christ in the poor and suffering', continuing her legacy in our time."
+      ]
     },
     howWeOperate: {
       title: "How We Operate", 
-      content: "Two Hearts Charitable Trust is a mission-driven charitable organization that operates entirely through the generosity of kind-hearted donors and well-wishers. We do not charge for the work of the Trust itself. Every initiative, outreach activity, and support service we offer is made possible by the freewill donations of individuals, families, and organizations who believe in our mission."
+      paragraphs: [
+        "Two Hearts Charitable Trust is a mission-driven charitable organization that operates entirely through the generosity of kind-hearted donors and well-wishers. We do not charge for the work of the Trust itself. Every initiative, outreach activity, and support service we offer is made possible by the freewill donations of individuals, families, and organizations who believe in our mission.",
+        "We are committed to transparency, integrity, and responsible stewardship, ensuring that every rupee received is directed toward uplifting the poor, empowering women, caring for the aged, and bringing dignity to the suffering. We rely on faith, prayer, and your support to keep this mission alive."
+      ]
     },
     visionMission: {
       title: "Our Vision and Mission",
@@ -49,7 +58,7 @@ export const mockData = {
     },
     {
       title: "Day Care Centre for Elderly Women",
-      description: "We operate a day care program for elderly women, offering them a nurturing space for companionship, nourishment, prayer, and productive engagement.",
+      description: "We operate a day care program for elderly women, offering them a nurturing space for companionship, nourishment, prayer, and productive engagement. Through activities like pickle and snack preparation, they gain both income and a renewed sense of purpose.",
       image: "/images/services/worship-celebration.jpg", 
       icon: "Users"
     },
@@ -61,15 +70,33 @@ export const mockData = {
     },
     {
       title: "Women Empowerment",
-      description: "Through our community initiatives, we empower women—especially the elderly and marginalized—by encouraging self-employment, creative expression, and community participation.",
+      description: "Through our community initiatives, we empower women—especially the elderly and marginalized—by encouraging self-employment, creative expression, and community participation, promoting dignity and self-confidence.",
       image: "/images/about/volunteer.jpg",
       icon: "Star"
     },
     {
       title: "Volunteer Training and Formation", 
-      description: "We believe that compassionate service begins with formation. Our structured volunteer training programs prepare individuals to serve effectively in hospice care, elderly support, and home visits.",
+      description: "We believe that compassionate service begins with formation. Our structured volunteer training programs prepare individuals to serve effectively in hospice care, elderly support, and home visits, grounded in empathy, respect, and Christian values.",
       image: "/images/services/community-worship.jpg",
       icon: "BookOpen"
+    },
+    {
+      title: "Community Outreach", 
+      description: "Our team, led by the DCV Sisters and volunteers, conduct regular home and institutional visits to the lonely, abandoned, and aged, offering not just material help, but the gift of presence, prayer, and companionship.",
+      image: "/images/services/community-worship.jpg",
+      icon: "Users"
+    },
+    {
+      title: "Counseling and Bereavement Support", 
+      description: "Our trained counselors support families through the emotional challenges of illness, grief, and loss—before, during, and after a loved one’s passing.",
+      image: "/images/services/spread-love.jpg",
+      icon: "Heart"
+    },
+    {
+      title: "Spiritual and Emotional Support", 
+      description: "Rooted in Christian compassion, our DCV sisters and chaplaincy team offer prayer, sacraments, counseling, and a healing presence for patients and families of all faiths.",
+      image: "/images/contact/devotional-cross.jpg",
+      icon: "Heart"
     }
   ],
   

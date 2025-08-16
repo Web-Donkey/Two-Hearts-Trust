@@ -36,28 +36,28 @@ const FacilitiesSection = () => {
       title: "Dining and Nutrition",
       description: "Nutritious, home-cooked meals tailored to individual dietary needs are provided for all in-patients. Day care guests also receive healthy meals and refreshments.",
       icon: Utensils,
-      image: "/api/placeholder/300/200",
+      image: "/images/about/volunteer.jpg",
       color: "from-orange-500 to-orange-600"
     },
     {
       title: "Family Waiting & Counseling Room",
       description: "Private, quiet areas where families can meet with our staff, receive updates, and access emotional and spiritual support.",
       icon: Users2,
-      image: "/api/placeholder/300/200",
+      image: "/images/services/spread-love.jpg",
       color: "from-teal-500 to-teal-600"
     },
     {
       title: "Garden and Open Courtyard",
       description: "Lush green spaces for patients and visitors to relax, breathe fresh air, and experience peace in nature.",
       icon: Sparkles,
-      image: "/api/placeholder/300/200",
+      image: "/images/services/worship-celebration.jpg",
       color: "from-emerald-500 to-emerald-600"
     },
     {
       title: "Cleanliness & Hygiene",
       description: "Regular housekeeping, and strict hygiene protocols ensure a safe, clean, and respectful environment.",
       icon: Shield,
-      image: "/api/placeholder/300/200",
+      image: "/images/facilities/hospital-room.jpg",
       color: "from-rose-500 to-rose-600"
     }
   ];
@@ -89,7 +89,7 @@ const FacilitiesSection = () => {
                   <img 
                     src={facility.image} 
                     alt={facility.title}
-                    className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                   <div className={`absolute top-4 left-4 bg-gradient-to-r ${facility.color} text-white p-3 rounded-full shadow-lg`}>
                     <IconComponent className="w-6 h-6" />

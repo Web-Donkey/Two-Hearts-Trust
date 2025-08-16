@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from './ui/dialog';
-import { Button } from './ui/button';
 import { Heart, Users, Target, ArrowRight } from 'lucide-react';
 import { mockData } from './mock';
 
@@ -100,26 +99,17 @@ const AboutSection = () => {
                       alt="Who we are" 
                       className="w-full h-64 object-cover rounded-lg mb-6"
                     />
-                    <p className="text-lg text-slate-700 leading-relaxed">
-                      {item.data.content}
-                    </p>
-                    <p className="text-lg text-slate-700 leading-relaxed">
-                      Her legacy lives on through the DCV Sisters, who continue her mission across the world. Inspired by her spirit, the Two Heart Charitable Trust was established to extend this mission in India, particularly through acts of mercy, health care, and empowerment.
-                    </p>
-                    <p className="text-lg text-slate-700 leading-relaxed">
-                      Named after the Sacred Heart of Jesus and the Immaculate Heart of Mary, the Trust embodies a twofold love: one that heals and one that consoles. It brings together medical professionals, caregivers, volunteers, and people of goodwill to serve the suffering with dignity, hope, and care.
-                    </p>
+                    {item.data.paragraphs && item.data.paragraphs.map((p, idx) => (
+                      <p key={idx} className="text-lg text-slate-700 leading-relaxed">{p}</p>
+                    ))}
                   </>
                 )}
                 
                 {item.id === 'how-we-operate' && (
                   <>
-                    <p className="text-lg text-slate-700 leading-relaxed">
-                      {item.data.content}
-                    </p>
-                    <p className="text-lg text-slate-700 leading-relaxed">
-                      We are committed to transparency, integrity, and responsible stewardship, ensuring that every rupee received is directed toward uplifting the poor, empowering women, caring for the aged, and bringing dignity to the suffering. We rely on faith, prayer, and your support to keep this mission alive.
-                    </p>
+                    {item.data.paragraphs && item.data.paragraphs.map((p, idx) => (
+                      <p key={idx} className="text-lg text-slate-700 leading-relaxed">{p}</p>
+                    ))}
                   </>
                 )}
                 
