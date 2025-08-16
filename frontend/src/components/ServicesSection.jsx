@@ -20,8 +20,7 @@ const ServicesSection = () => {
           <h2 className="section-title">Our Services</h2>
           <div className="section-divider"></div>
           <p className="section-subtitle">
-            Compassionate, faith-driven care and support services powered by the generosity of donors 
-            and the dedication of trained volunteers, rooted in the love of the Two Hearts of Jesus and Mary.
+            At Two Hearts Charitable Trust, we are committed to offering compassionate, faith-driven care and support to the terminally ill, elderly, and vulnerable members of society. Rooted in the vision of the DCV Sisters and inspired by the love of the Two Hearts of Jesus and Mary, our services are powered by the generosity of donors and the dedication of trained volunteers.
           </p>
         </div>
 
@@ -41,7 +40,7 @@ const ServicesSection = () => {
                     <img 
                       src={service.image} 
                       alt={service.title}
-                      className="w-24 h-24 rounded-full object-cover mx-auto border-4 border-blue-100 group-hover:border-blue-300 transition-colors duration-300"
+                      className="w-28 h-28 md:w-32 md:h-32 rounded-full object-cover mx-auto border-4 border-blue-100 group-hover:border-blue-300 transition-colors duration-300 shadow-sm"
                     />
                     {/* Icon Overlay */}
                     <div className="absolute -bottom-2 -right-2 bg-blue-600 text-white p-3 rounded-full group-hover:bg-blue-700 transition-colors duration-300 shadow-lg">

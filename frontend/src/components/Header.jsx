@@ -22,7 +22,7 @@ const Header = () => {
     }
   };
 
-  const navLinkClass = `${isScrolled ? 'text-slate-700 hover:text-blue-600' : 'text-white hover:text-blue-200'} transition-colors duration-200 font-medium`;
+  const navLinkClass = `${isScrolled ? 'text-slate-700 hover:text-blue-600' : 'text-white text-shadow hover:text-blue-100'} transition-colors duration-200 font-medium`;
 
   return (
     <header className={`fixed w-full top-0 z-50 transition-all duration-300 ${
