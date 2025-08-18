@@ -99,7 +99,7 @@ const Footer = () => {
         </div>
 
         {/* Trust Members */}
-        <div className="mt-12 pt-8 border-t border-gray-700">
+        {/* <div className="mt-12 pt-8 border-t border-gray-700">
           <h4 className="text-lg font-semibold mb-6 text-center">Our Trust Members</h4>
           <div className="grid md:grid-cols-3 gap-6">
             <div className="text-center">
@@ -126,7 +126,7 @@ const Footer = () => {
               <p className="text-gray-400 text-sm">Trustee</p>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
 
       {/* Bottom Bar */}
@@ -135,13 +135,13 @@ const Footer = () => {
           <div className="md:flex md:items-center md:justify-between">
             <div className="text-center md:text-left">
               <p className="text-gray-400 text-sm">
-                © 2024 Two Hearts Charitable Trust. All rights reserved.
+                © 2025 Two Hearts Charitable Trust. All rights reserved.
               </p>
             </div>
             
             <div className="mt-4 md:mt-0 text-center md:text-right">
               <p className="text-gray-400 text-sm">
-                "Love of Christ Urges Us" - Inspired by Teresa Fardella de Blasi
+                Love of Christ Urges Us
               </p>
             </div>
           </div>

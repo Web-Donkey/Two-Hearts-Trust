@@ -36,21 +36,21 @@ const FacilitiesSection = () => {
       title: "Dining and Nutrition",
       description: "Nutritious, home-cooked meals tailored to individual dietary needs are provided for all in-patients. Day care guests also receive healthy meals and refreshments.",
       icon: Utensils,
-      image: "/images/about/volunteer.jpg",
+      image: "/images/services/nutrition.jpeg",
       color: "from-orange-500 to-orange-600"
     },
     {
       title: "Family Waiting & Counseling Room",
       description: "Private, quiet areas where families can meet with our staff, receive updates, and access emotional and spiritual support.",
       icon: Users2,
-      image: "/images/services/spread-love.jpg",
+      image: "/images/facilities/9.jpeg",
       color: "from-teal-500 to-teal-600"
     },
     {
       title: "Garden and Open Courtyard",
       description: "Lush green spaces for patients and visitors to relax, breathe fresh air, and experience peace in nature.",
       icon: Sparkles,
-      image: "/images/services/worship-celebration.jpg",
+      image: "/images/services/garden.jpeg",
       color: "from-emerald-500 to-emerald-600"
     },
     {

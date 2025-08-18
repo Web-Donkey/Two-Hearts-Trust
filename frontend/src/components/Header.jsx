@@ -22,7 +22,7 @@ const Header = () => {
     }
   };
 
-  const navLinkClass = `${isScrolled ? 'text-slate-700 hover:text-blue-600' : 'text-white text-shadow hover:text-blue-100'} transition-colors duration-200 font-medium`;
+  const navLinkClass = `${isScrolled ? 'text-slate-700 hover:text-blue-600' : ' text-shadow hover:text-blue-100'} transition-colors duration-200 font-medium`;
 
   return (
     <header className={`fixed w-full top-0 z-50 transition-all duration-300 ${
@@ -35,9 +35,9 @@ const Header = () => {
             <img 
               src={mockData.navigation.motherMaryImage} 
               alt="Mother Mary" 
-              className="w-12 h-12 rounded-full object-cover border-2 border-blue-200"
+              className="w-12 h-12 rounded-full object-cover border-blue-200"
             />
-            <div className={`text-xl font-bold ${isScrolled ? 'text-slate-800' : 'text-white text-shadow'}`}>
+            <div className={`text-xl font-bold ${isScrolled ? 'text-slate-800' : 'text-shadow'}`}>
               Two Hearts Charitable Trust
             </div>
           </div>

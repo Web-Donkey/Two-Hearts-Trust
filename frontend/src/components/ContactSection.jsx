@@ -102,7 +102,7 @@ const ContactSection = () => {
                     <img 
                       src={image} 
                       alt={`Christ Image ${index + 1}`}
-                      className="w-full h-32 object-cover hover:scale-105 transition-transform duration-300"
+                      className="w-full  object-cover hover:scale-105 transition-transform duration-300"
                     />
                   </div>
                 ))}
