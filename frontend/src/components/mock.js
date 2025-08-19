@@ -17,7 +17,7 @@ export const mockData = {
   aboutUs: {
     whoWeAre: {
       title: "Who We Are",
-      image: "/images/about/volunteer.jpg",
+      image: "/images/services/old9.jpeg",
       paragraphs: [
         "Two Hearts Charitable Trust is the fruit of a sacred vision planted in the hearts of the Poor Daughters of the Crowned Virgin (DCV Sisters)—a religious congregation founded by Venerable Teresa Fardella de Blasi in Italy. Deeply moved by the suffering of the poor, the sick, and the abandoned, Teresa Fardella dedicated her life to compassionate service rooted in faith and love.",
         "Her legacy lives on through the DCV Sisters, who continue her mission across the world. Inspired by her spirit, the Two Heart Charitable Trust was established to extend this mission in India, particularly through acts of mercy, health care, and empowerment.",
