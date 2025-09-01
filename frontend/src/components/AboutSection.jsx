@@ -40,7 +40,7 @@ const AboutSection = () => {
         <div className="text-center mb-16">
           <h2 className="section-title">About Two Hearts Charitable Trust</h2>
           <div className="section-divider"></div>
-          <p className="section-subtitle">
+          <p className="section-subtitle text-justify">
             Inspired by the legacy of Venerable Teresa Fardella, we continue a mission of 
             compassionate service to the terminally ill, elderly, and vulnerable members of our community.
           </p>
@@ -53,10 +53,10 @@ const AboutSection = () => {
             return (
               <div 
                 key={item.id}
-                className={`bg-gradient-to-br ${item.color} border-2 rounded-xl p-8 cursor-pointer transform hover:scale-105 transition-all duration-300 hover:shadow-xl group`}
+                className={`bg-gradient-to-br ${item.color} border-2 rounded-xl p-8 cursor-pointer transform hover:scale-105 transition-all duration-300 hover:shadow-xl group `}
                 onClick={() => setActiveModal(item.id)}
               >
-                <div className="flex items-center justify-center w-16 h-16 bg-white rounded-full mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
+                <div className="flex items-center justify-center w-16 h-16 bg-white rounded-full mb-6 mx-auto group-hover:scale-110 transition-transform duration-300 ">
                   <IconComponent className="w-8 h-8 text-blue-600" />
                 </div>
                 
@@ -64,7 +64,7 @@ const AboutSection = () => {
                   {item.title}
                 </h3>
                 
-                <p className="text-slate-600 text-center mb-6 leading-relaxed">
+                <p className="text-slate-600 text-justify mb-6 leading-relaxed">
                   {item.preview}
                 </p>
                 
@@ -94,11 +94,11 @@ const AboutSection = () => {
               <div className="space-y-6">
                 {item.id === 'who-we-are' && (
                   <>
-                    <img 
+                    {/* <img 
                       src={item.data.image} 
                       alt="Who we are" 
                       className="w-full h-64 object-cover rounded-lg mb-6"
-                    />
+                    /> */}
                     {item.data.paragraphs && item.data.paragraphs.map((p, idx) => (
                       <p key={idx} className="text-lg text-slate-700 leading-relaxed">{p}</p>
                     ))}

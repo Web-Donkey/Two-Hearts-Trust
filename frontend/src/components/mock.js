@@ -3,7 +3,7 @@
 export const mockData = {
   navigation: {
     logo: "/images/nav/logo.jpeg",
-    motherMaryImage: "/images/nav/logo.jpeg",
+    motherMaryImage: "/images/nav/mary-avatar.jpg",
   },
 
   hero: {
