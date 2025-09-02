@@ -145,7 +145,7 @@ const Header = () => {
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
           <DialogTitle className="text-2xl font-bold">Bank Details</DialogTitle>
-          <p className="text-sm text-slate-500">Use the details below to donate via bank transfer.</p>
+          <DialogDescription className="text-sm text-slate-500">Use the details below to donate via bank transfer.</DialogDescription>
         </DialogHeader>
         <div className="space-y-4">
           <div>
