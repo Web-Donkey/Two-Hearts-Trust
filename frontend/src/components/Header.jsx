@@ -71,7 +71,7 @@ const Header = () => {
 
               {/* Donate Now replaces rightmost image */}
               <DialogTrigger asChild>
-                <Button className={`${isScrolled ? 'bg-blue-600 hover:bg-blue-700 text-white' : 'bg-white/20 hover:bg-white/30 text-white'} px-5 py-2 rounded-full font-semibold shadow-sm`}>
+                <Button className={`bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-full font-semibold shadow-sm`}>
                   Donate Now
                 </Button>
               </DialogTrigger>
