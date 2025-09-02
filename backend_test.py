@@ -11,7 +11,7 @@ from datetime import datetime
 import xml.etree.ElementTree as ET
 
 # Get backend URL from environment
-BACKEND_URL = "https://nav-hero-mobile-fix.preview.emergentagent.com/api"
+BACKEND_URL = "https://nav-donate-update.preview.emergentagent.com/api"
 
 def test_placeholder_endpoint():
     """Test the new placeholder endpoint with various scenarios"""
