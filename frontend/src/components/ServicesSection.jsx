@@ -58,9 +58,7 @@ const ServicesSection = () => {
                       {service.description}
                     </p>
 
-                    <button className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors duration-200 group-hover:translate-x-1">
-                      Learn More
-                    </button>
+                    {/* Removed Learn More button as requested */}
                   </div>
                 </article>
               ))}
@@ -80,9 +78,14 @@ const ServicesSection = () => {
               to those who need it most.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="btn btn-primary px-8 py-3">
+              <a
+                className="btn btn-primary px-8 py-3"
+                href="https://docs.google.com/forms/d/e/1FAIpQLScr6ass5mzQXrZLibcOqLlc52vX9Qxjp5amupG-P25t2XPmWA/viewform?usp=dialog"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Become a Volunteer
-              </button>
+              </a>
               {/* <button className="btn btn-secondary px-8 py-3">
                 Make a Donation
               </button> */}
